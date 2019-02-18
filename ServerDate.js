@@ -41,7 +41,7 @@ var
   // Remember the URL of this script so we can call it again during
   // synchronization.
   scripts = document.getElementsByTagName("script"),
-  URL = scripts[scripts.length - 1].src,
+  URL = "https://api.chucknorris.io/jokes/random", // CUSTOM: get a chuck norris joke instead of the script again scripts[scripts.length - 1].src,
 
   synchronizationIntervalDelay,
   synchronizationInterval,
