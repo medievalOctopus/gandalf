@@ -2,7 +2,7 @@ started = false;
 
 var setupSound = function(e) {
 	var sax = document.getElementById("sax_guy");
-	var idealPos = new Date().getTime() % (sax.duration * 1000);
+	var idealPos = ServerDate.getTime() % (sax.duration * 1000);
 	sax.currentTime = idealPos / 1000;
 	sax.play();
 }
