@@ -1,8 +1,16 @@
 started = false;
 
+var getBestTime = function() {
+	if(ServerDate.getFullYear() == 1970) {
+		// assuming it isn't really 1970 again
+		return new Date().getTime()
+	}
+	return ServerDate.getTime();
+}
+
 var setupSound = function(e) {
 	var sax = document.getElementById("sax_guy");
-	var idealPos = ServerDate.getTime() % (sax.duration * 1000);
+	var idealPos = getBestTime() % (sax.duration * 1000);
 	sax.currentTime = idealPos / 1000;
 	sax.play();
 }
